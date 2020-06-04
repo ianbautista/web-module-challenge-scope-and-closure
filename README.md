@@ -42,7 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
-   `Closure is`
+   `Closure is a function enclosed inside of a function that in a way preserves that data to be accessed when you run the function.`
 
 2. Study the following code, then answer the questions below.
 
