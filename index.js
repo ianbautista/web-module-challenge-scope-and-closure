@@ -2,44 +2,46 @@
 
 /**
  * ### Challenge `processFirstItem`
- * 
+ *
  * @instructions
  * Implement a higher-order function called `processFirstItem`.
  * It takes two arguments:
  * @param stringList an array of strings.
  * @param callback function that takes a string as its argument.
  * @returns the result of invoking `callback` with the FIRST element in `stringList`.
- * 
+ *
  * Example of usage of this higher-order function:
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
-*/
+ */
 function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
+  return callback(stringList[0]);
 }
 
 // ⭐️ Example Challenge END ⭐️
-
 
 ///// M V P ///////
 
 /* Task 1: `counterMaker`
  * Study the code for counter1 and counter2. Answer the questions below.
- * 
- * 1. What is the difference between counter1 and counter2?
- * 
- * 2. Which of the two uses a closure? How can you tell?
- * 
- * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
-*/
+ * 1. What is the difference between counter1 and counter2?
+ *    `counter1 was assigned the function counterMaker() while counter2 is a function in itself that is accessing a value in its global scope.`
+ *
+ * 2. Which of the two uses a closure? How can you tell?
+ *    `counter1 uses a closure because counterMaker() has a nested function inside it.`
+ *
+ * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?
+ *    `counter 1 is always prefered because having all your variable nested inside your functions has a lesser chance of breaking your code if you are writing a long program.
+ * counter2 is not ideal but you can use it when you need the counter variable globally accessible which is not a goo practice.`
+ */
 
 // counter1 code
 function counterMaker() {
   let count = 0;
   return function counter() {
-   return count++;
-  }
+    return count++;
+  };
 }
 
 const counter1 = counterMaker();
@@ -51,16 +53,19 @@ function counter2() {
   return count++;
 }
 
-
 /* Task 2: inning() 
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning(innings) {
+  /*Code Here*/
+  for (let i = 0; i < innings; i++) {
+    let score = Math.floor(Math.random() * 3);
+    console.log(score);
+  }
 }
+
+inning(9);
 
 /* Task 3: finalScore()
 
@@ -74,12 +79,10 @@ finalScore(inning, 9) might return:
   "Away": 5,
 }
 
-*/ 
+*/
 
-function finalScore(/*code Here*/){
-
+function finalScore(/*code Here*/) {
   /*Code Here*/
-
 }
 
 /* Task 4: 
@@ -106,5 +109,3 @@ Final Score: 6 - 10 */
 function scoreboard(/* CODE HERE */) {
   /* CODE HERE */
 }
-
-
