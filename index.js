@@ -127,7 +127,6 @@ Final Score: 6 - 10 */
 
 function scoreboard(callback, numInnings) {
   /* CODE HERE */
-  numInnings - 1;
   inningRound = 0;
   teamHome = 0;
   teamAway = 0;
@@ -136,11 +135,11 @@ function scoreboard(callback, numInnings) {
     teamHome = teamHome + callback();
     teamAway = teamAway + callback();
     ++inningRound;
-    if (i == 1) {
+    if (i == 0) {
       console.log(`${inningRound}st inning: ${teamHome} - ${teamAway}`);
-    } else if (i == 2) {
+    } else if (i == 1) {
       console.log(`${inningRound}nd inning: ${teamHome} - ${teamAway}`);
-    } else if (i == 3) {
+    } else if (i == 2) {
       console.log(`${inningRound}rd inning: ${teamHome} - ${teamAway}`);
     } else {
       console.log(`${inningRound}th inning: ${teamHome} - ${teamAway}`);
